@@ -6,12 +6,49 @@ using namespace std;
 int main()
 {
 	List<int> lst;
-	lst.PushBack(10);
-	lst.PushBack(5);
+	lst.PushFront(10);
+	lst.PushFront(5);
 	lst.PushBack(23);
-	cout << lst.GetSize()<< endl;
-	lst.PushBack(33);
+	lst.PushFront(4);
+
 	cout << lst.GetSize() << endl;
-	cout << lst[2] << endl;
+	cout << "==============" << endl;
+	for (int i = 0; i < lst.GetSize(); i++)
+	{
+		cout << lst[i] << endl;
+	}
+	cout << "==============" << endl;
+	lst.Insert(100,2);
+	cout << lst.GetSize() << endl;
+	cout << "==============" << endl;
+	for (int i = 0; i < lst.GetSize(); i++)
+	{
+		cout << lst[i] << endl;
+	}
+	cout << "==============" << endl;
+
+
+
+	lst.Remove(2);
+	lst.Remove(2);
+	cout << lst.GetSize() << endl;
+	cout << "==============" << endl;
+	for (int i = 0; i < lst.GetSize(); i++)
+	{
+		cout << lst[i] << endl;
+	}
+	cout << "==============" << endl;
+
+
+
+	lst.PopBack();
+	cout << lst.GetSize() << endl;
+	cout << "==============" << endl;
+	for (int i = 0; i < lst.GetSize(); i++)
+	{
+		cout << lst[i] << endl;
+	}
+	cout << "==============" << endl;
+
 	return 0;
 }

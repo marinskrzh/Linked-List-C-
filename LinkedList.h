@@ -7,8 +7,14 @@ class List
 {
 public:
 	List();
-	//~List();
+	~List();
 	void PushBack(T data);
+	void PushFront(T data);
+	void PopFront();
+	void PopBack();
+	void Insert(T data, int index);
+	void Remove(int index);
+	void Clear();
 	int GetSize() {return Size;};
 	T& operator[](const int index);
 
